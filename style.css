@@ -1,30 +1,88 @@
+/* Main Theme Colors */
+:root {
+  --primary-color: #0d0d0d;
+  --accent-color: #00ffcc;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #fff;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
-  }
-  
-  main {
-    padding-top: 60px;
-  }
-  
-  .navbar-brand {
-    letter-spacing: 3px;
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
+  transition: background-color 0.3s;
+}
+
+.navbar-brand {
+  color: var(--accent-color);
+  letter-spacing: 3px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Main Content */
+.intro {
+  padding: 100px;
+  text-align: center;
+}
+
+.display-1 {
+  font-weight: 450;
+  letter-spacing: 15px;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
+
+img {
+  border: 2px solid var(--accent-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* Responsive Grid for Images */
+.row {
+  padding: 50px;
+}
+
+.col-sm-6 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
   .intro {
-    padding: 100px;
-    text-align: center;
-  }
-  
-  .display-1 {
-    font-weight: 450 !important;
-    letter-spacing: 25px;
+    padding: 50px;
   }
 
-  
+  .display-1 {
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+  }
+
+  img {
+    height: 300px;
+    width: 300px;
+  }
+}
