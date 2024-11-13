@@ -1,68 +1,179 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     text-align: center;
-  }
-  
-  h1 {
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width/height */
+}
+
+/* Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the body takes up the entire viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #f0f0f0;
+}
+
+/* Header */
+h1 {
     background-color: #081b31;
     color: #fff;
     height: 5rem;
     line-height: 5rem;
-  }
-  
-  .choice {
+    width: 100%;
+    text-align: center;
+}
+
+/* Choice Button Styles */
+.choice {
     height: 165px;
     width: 165px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .choice:hover {
+    transition: background-color 0.3s ease;
+}
+
+.choice:hover {
     cursor: pointer;
     background-color: #081b31;
-  }
-  
-  img {
+}
+
+img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-  }
-  
-  .choices {
+}
+
+/* Choices Container */
+.choices {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     margin-top: 5rem;
-  }
-  
-  .score-board {
+    flex-wrap: wrap; /* Allow wrapping of elements on smaller screens */
+}
+
+/* Scoreboard */
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     margin-top: 3rem;
     gap: 5rem;
-  }
-  
-  #user-score,
-  #comp-score {
+}
+
+#user-score,
+#comp-score {
     font-size: 4rem;
-  }
-  
-  .msg-container {
+}
+
+/* Message Container */
+.msg-container {
     margin-top: 5rem;
-  }
-  
-  #msg {
+}
+
+#msg {
     background-color: #081b31;
     color: #fff;
     font-size: 2rem;
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
-  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust header height */
+    h1 {
+        height: 4rem;
+        line-height: 4rem;
+    }
+
+    /* Adjust choices container to display items in a row with wrap */
+    .choices {
+        flex-direction: row; /* Keep horizontal layout */
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    /* Reduce size of the choices for smaller screens */
+    .choice {
+        height: 140px;
+        width: 140px;
+    }
+
+    /* Make the img smaller */
+    img {
+        height: 120px;
+        width: 120px;
+    }
+
+    /* Adjust scoreboard font size for mobile */
+    .score-board {
+        font-size: 1.5rem;
+        gap: 3rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3rem;
+    }
+
+    /* Adjust message font size */
+    #msg {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce the header size */
+    h1 {
+        height: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    /* Make choices even smaller and stack them closely */
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    /* Further reduce the image size */
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    /* Keep choices horizontally aligned */
+    .choices {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem; /* Reduced gap */
+    }
+
+    /* Further reduce font size for scoreboard */
+    .score-board {
+        font-size: 1.3rem;
+        gap: 2rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2.5rem;
+    }
+
+    /* Adjust message container for smaller screens */
+    #msg {
+        font-size: 1.3rem;
+        padding: 0.6rem;
+    }
+}
