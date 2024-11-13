@@ -1,0 +1,30 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  main {
+    padding-top: 60px;
+  }
+  
+  .navbar-brand {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .intro {
+    padding: 100px;
+    text-align: center;
+  }
+  
+  .display-1 {
+    font-weight: 450 !important;
+    letter-spacing: 25px;
+  }
+
+  
