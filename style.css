@@ -45,7 +45,7 @@ body {
 
 /* Main Content */
 .intro {
-  padding: 80px 20px;
+  padding: 120px 20px 80px; /* Adds extra padding to avoid overlap with navbar */
   text-align: center;
 }
 
@@ -79,11 +79,11 @@ img:hover {
 /* Responsive Design for Tablets and Phones */
 @media (max-width: 768px) {
   .intro {
-    padding: 40px 10px;
+    padding: 100px 10px 60px; /* Adjust padding for smaller screens */
   }
 
   .display-1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     letter-spacing: 6px;
   }
 
@@ -100,12 +100,13 @@ img:hover {
   }
 
   .intro {
-    padding: 30px 10px;
+    padding: 80px 10px 1px/* Ensure ample space between navbar and intro text on phones */
   }
 
   .display-1 {
-    font-size: 1.8rem;
-    letter-spacing: 4px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(0, 230, 184, 0.6);
   }
 
   img {
