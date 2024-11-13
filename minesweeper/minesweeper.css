@@ -1,0 +1,148 @@
+/* Global Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 80vw; /* Take up 80% of the viewport width */
+    height: 80vw; /* Same as width, so it's a square */
+    max-width: 400px; /* Cap the width to 400px on large screens */
+    max-height: 400px; /* Cap the height to 400px */
+    border: 10px solid darkgray;
+    background-color: lightgray;
+    margin: 10px auto; /* Reduced space between button and board */
+}
+
+#board div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid whitesmoke;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4e4e4;
+    position: relative;
+}
+
+/* Hide the content initially to avoid displaying numbers or text */
+#board div::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Show only the flag when the tile is in flag mode */
+#board div.flagged::after {
+    content: "🚩";
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.tile-clicked {
+    background-color: darkgrey;
+}
+
+.x1 {
+    color: blue;
+}
+
+.x2 {
+    color: green;
+}
+
+.x3 {
+    color: red;
+}
+
+.x4 {
+    color: navy;
+}
+
+.x5 {
+    color: brown;
+}
+
+.x6 {
+    color: teal;
+}
+
+.x7 {
+    color: black;
+}
+
+.x8 {
+    color: gray;
+}
+
+/* Flag Button */
+#flag-button {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Reduced margin-top */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #board {
+        width: 70vw;
+        height: 70vw;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    #board div {
+        font-size: 24px;
+    }
+
+    #flag-button {
+        width: 80px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #board {
+        width: 90vw;
+        height: 90vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    #board div {
+        font-size: 20px;
+    }
+
+    #flag-button {
+        width: 70px;
+        height: 35px;
+        font-size: 20px;
+    }
+}

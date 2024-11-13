@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+hr {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+}
+
+#errors {
+    color: coral;
+    font-size: 1.5rem;
+}
+
+/* Sudoku Board */
+#board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 2px;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid lightgray;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.tile-start {
+    background-color: whitesmoke;
+}
+
+.number-selected {
+    background-color: gray;
+}
+
+.horizontal-line {
+    border-bottom: 2px solid black;
+}
+
+.vertical-line {
+    border-right: 2px solid black;
+}
+
+/* Number Digits */
+#digits {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.number {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.number-selected {
+    background-color: gray;
+}
+
+@media (max-width: 768px) {
+    #board {
+        grid-template-columns: repeat(9, 1fr);
+        max-width: 90%;
+    }
+
+    .tile {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    #errors {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #board {
+        grid-template-columns: repeat(9, 1fr);
+        max-width: 100%;
+    }
+
+    .tile {
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .number {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    #errors {
+        font-size: 1rem;
+    }
+}
